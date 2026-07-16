@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inbarasan | Cute Animated Portfolio</title>
     <style>
-        /* ========== CUTE GLOBAL RESET & VARIABLES ========== */
         *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         :root {
             --cute-pink: #ffb3d9;
             --cute-blue: #b3e0ff;
@@ -23,9 +21,7 @@
             --deep-bg: #1a0a1e;
             --card-bg: rgba(255, 255, 255, 0.08);
             --text-light: #f5f0ff;
-            --soft-shadow: 0 8px 30px rgba(0,0,0,0.15);
         }
-
         body {
             font-family: 'Poppins', sans-serif;
             background: var(--deep-bg);
@@ -34,10 +30,7 @@
             line-height: 1.6;
             position: relative;
             min-height: 100vh;
-            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><circle cx='10' cy='10' r='8' fill='%23ffb3d9' opacity='0.8'/></svg>") 10 10, auto;
         }
-
-        /* ========== CUTE ANIMATED BACKGROUND ========== */
         .bg-cute {
             position: fixed;
             top: 0;
@@ -48,13 +41,10 @@
             background: radial-gradient(circle at 20% 30%, #3a0d45 0%, #0a0210 70%);
             animation: bgMove 25s infinite alternate ease-in-out;
         }
-
         @keyframes bgMove {
-            0% { background-position: 0% 0%; }
-            100% { background-position: 100% 100%; }
+            0% { background: radial-gradient(circle at 20% 30%, #3a0d45 0%, #0a0210 70%); }
+            100% { background: radial-gradient(circle at 80% 70%, #3a0d45 0%, #0a0210 70%); }
         }
-
-        /* floating pastel bubbles */
         .bubbles {
             position: fixed;
             top: 0;
@@ -64,14 +54,12 @@
             z-index: -2;
             overflow: hidden;
         }
-
         .bubble {
             position: absolute;
             border-radius: 50%;
             opacity: 0.3;
             animation: floatBubble 20s infinite linear;
         }
-
         .bubble:nth-child(1) { width: 120px; height: 120px; left: 5%; top: 80%; background: var(--cute-pink); animation-duration: 18s; animation-delay: 0s; }
         .bubble:nth-child(2) { width: 80px; height: 80px; left: 25%; top: 20%; background: var(--cute-blue); animation-duration: 22s; animation-delay: 2s; }
         .bubble:nth-child(3) { width: 100px; height: 100px; left: 70%; top: 10%; background: var(--cute-purple); animation-duration: 20s; animation-delay: 4s; }
@@ -80,14 +68,11 @@
         .bubble:nth-child(6) { width: 50px; height: 50px; left: 10%; top: 10%; background: var(--cute-pink); animation-duration: 15s; animation-delay: 5s; }
         .bubble:nth-child(7) { width: 130px; height: 130px; left: 80%; top: 30%; background: var(--cute-blue); animation-duration: 30s; animation-delay: 0s; }
         .bubble:nth-child(8) { width: 70px; height: 70px; left: 30%; top: 70%; background: var(--cute-purple); animation-duration: 24s; animation-delay: 6s; }
-
         @keyframes floatBubble {
-            0% { transform: translateY(0) scale(1) rotate(0deg); opacity: 0.3; }
-            50% { transform: translateY(-200px) scale(1.3) rotate(180deg); opacity: 0.6; }
-            100% { transform: translateY(0) scale(1) rotate(360deg); opacity: 0.3; }
+            0% { transform: translateY(0) scale(1) rotate(0deg); opacity: 0.2; }
+            50% { transform: translateY(-200px) scale(1.3) rotate(180deg); opacity: 0.5; }
+            100% { transform: translateY(0) scale(1) rotate(360deg); opacity: 0.2; }
         }
-
-        /* ========== UNIVERSAL FADE IN ========== */
         .fade-in-section {
             animation: fadeInUp 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
             opacity: 0;
@@ -102,13 +87,10 @@
         .fade-in-section:nth-child(8) { animation-delay: 1.6s; }
         .fade-in-section:nth-child(9) { animation-delay: 1.8s; }
         .fade-in-section:nth-child(10) { animation-delay: 2.0s; }
-
         @keyframes fadeInUp {
             0% { opacity: 0; transform: translateY(40px); }
             100% { opacity: 1; transform: translateY(0); }
         }
-
-        /* ========== CONTAINER ========== */
         .container {
             width: 90%;
             max-width: 1200px;
@@ -117,8 +99,6 @@
             position: relative;
             z-index: 2;
         }
-
-        /* ========== CUTE HERO ========== */
         .hero {
             text-align: center;
             min-height: 100vh;
@@ -142,7 +122,6 @@
             0% { filter: drop-shadow(0 0 10px var(--cute-pink)); }
             100% { filter: drop-shadow(0 0 35px var(--cute-blue)); }
         }
-
         .typing-img {
             display: block;
             margin: 0 auto 2rem;
@@ -156,7 +135,6 @@
             from { transform: scale(1); }
             to { transform: scale(1.03); }
         }
-
         .profile-views {
             display: inline-block;
             background: rgba(255,255,255,0.1);
@@ -173,8 +151,6 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-8px); }
         }
-
-        /* ========== SECTION TITLES ========== */
         .section-title {
             text-align: center;
             font-size: 3.2rem;
@@ -200,8 +176,6 @@
             from { width: 80px; background: var(--cute-pink); }
             to { width: 180px; background: var(--cute-blue); }
         }
-
-        /* ========== ABOUT ========== */
         .about-grid {
             display: flex;
             flex-wrap: wrap;
@@ -239,8 +213,6 @@
             transform: rotate(-3deg) scale(1.08);
             box-shadow: 0 0 70px rgba(179,224,255,0.8);
         }
-
-        /* ========== SKILLS ========== */
         .skills-grid {
             display: flex;
             flex-wrap: wrap;
@@ -264,8 +236,6 @@
             transform: translateY(-15px) scale(1.2) rotate(0deg);
             filter: drop-shadow(0 0 25px var(--cute-purple));
         }
-
-        /* ========== PROJECT CARDS ========== */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -290,7 +260,6 @@
         .project-card:nth-child(3) { animation-delay: 1s; }
         .project-card:nth-child(4) { animation-delay: 1.5s; }
         .project-card:nth-child(5) { animation-delay: 2s; }
-
         .project-card::before {
             content: '';
             position: absolute;
@@ -323,12 +292,11 @@
         }
         .project-card ul {
             list-style: none;
+            margin-top: 1rem;
         }
         .project-card li {
             padding: 0.3rem 0;
         }
-
-        /* ========== STATS / TROPHIES / GRAPH ========== */
         .stats-grid {
             display: flex;
             flex-wrap: wrap;
@@ -353,7 +321,6 @@
             height: auto;
             display: block;
         }
-
         .graph-container img,
         .trophies-grid img,
         .snake-container img {
@@ -370,8 +337,6 @@
             transform: scale(1.02);
             box-shadow: 0 0 60px rgba(179,224,255,0.7);
         }
-
-        /* ========== CONNECT BUTTONS ========== */
         .connect-buttons {
             display: flex;
             justify-content: center;
@@ -409,8 +374,6 @@
             width: 28px;
             height: 28px;
         }
-
-        /* ========== FOOTER ========== */
         .footer-wave img {
             width: 100%;
             display: block;
@@ -430,32 +393,20 @@
             from { filter: drop-shadow(0 0 8px var(--cute-pink)); }
             to { filter: drop-shadow(0 0 25px var(--cute-blue)); }
         }
-
-        /* ========== CUTE EXTRAS (hearts, sparkles) ========== */
         .cute-decoration {
-            position: absolute;
+            position: fixed;
             pointer-events: none;
+            z-index: 1;
             animation: spin 10s linear infinite;
-        }
-        .cute-decoration.top-left {
-            top: 10%;
-            left: 5%;
             font-size: 3rem;
             opacity: 0.6;
         }
-        .cute-decoration.bottom-right {
-            bottom: 15%;
-            right: 5%;
-            font-size: 4rem;
-            opacity: 0.5;
-            animation-direction: reverse;
-        }
+        .cute-decoration.top-left { top: 10%; left: 5%; }
+        .cute-decoration.bottom-right { bottom: 15%; right: 5%; font-size: 4rem; animation-direction: reverse; }
         @keyframes spin {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
-
-        /* RESPONSIVE */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.8rem; }
             .section-title { font-size: 2.2rem; }
@@ -464,7 +415,6 @@
     </style>
 </head>
 <body>
-    <!-- Cute animated background -->
     <div class="bg-cute"></div>
     <div class="bubbles">
         <div class="bubble"></div>
@@ -479,14 +429,12 @@
     <div class="cute-decoration top-left">🌸</div>
     <div class="cute-decoration bottom-right">🌟</div>
 
-    <!-- ========== HERO ========== -->
     <header class="hero fade-in-section">
         <h1>👋 Hey, I'm Inbarasan</h1>
         <img class="typing-img" src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=28&duration=3000&pause=1000&color=ffb3d9&center=true&vCenter=true&width=700&lines=Frontend+Developer;React+Developer;JavaScript+Enthusiast;Building+Awesome+Web+Applications;Always+Learning+New+Technologies" alt="typing" />
         <div class="profile-views">✨ Profile Views: 2.3k+</div>
     </header>
 
-    <!-- ========== ABOUT ========== -->
     <section class="container fade-in-section">
         <h2 class="section-title">🌸 About Me</h2>
         <div class="about-grid">
@@ -503,7 +451,6 @@
         </div>
     </section>
 
-    <!-- ========== TECH STACK ========== -->
     <section class="container fade-in-section">
         <h2 class="section-title">🍭 Tech Stack</h2>
         <div class="skills-grid">
@@ -522,7 +469,6 @@
         </div>
     </section>
 
-    <!-- ========== FEATURED PROJECTS ========== -->
     <section class="container fade-in-section">
         <h2 class="section-title">🎀 Featured Projects</h2>
         <div class="projects-grid">
@@ -575,7 +521,6 @@
         </div>
     </section>
 
-    <!-- ========== LANGUAGES & TOOLS ========== -->
     <section class="container fade-in-section">
         <h2 class="section-title">🧁 Languages & Tools</h2>
         <div class="skills-grid">
@@ -592,7 +537,6 @@
         </div>
     </section>
 
-    <!-- ========== GITHUB STATS ========== -->
     <section class="container fade-in-section">
         <h2 class="section-title">📊 GitHub Statistics</h2>
         <div class="stats-grid">
@@ -608,7 +552,6 @@
         </div>
     </section>
 
-    <!-- ========== TROPHIES ========== -->
     <section class="container fade-in-section">
         <h2 class="section-title">🏆 GitHub Trophies</h2>
         <div class="trophies-grid">
@@ -616,7 +559,6 @@
         </div>
     </section>
 
-    <!-- ========== CONTRIBUTION GRAPH ========== -->
     <section class="container fade-in-section">
         <h2 class="section-title">📈 Contribution Graph</h2>
         <div class="graph-container">
@@ -624,7 +566,6 @@
         </div>
     </section>
 
-    <!-- ========== SNAKE ========== -->
     <section class="container fade-in-section">
         <h2 class="section-title">🐍 Snake Eating Contributions</h2>
         <div class="snake-container">
@@ -632,7 +573,6 @@
         </div>
     </section>
 
-    <!-- ========== CONNECT ========== -->
     <section class="container fade-in-section">
         <h2 class="section-title">🌎 Connect With Me</h2>
         <div class="connect-buttons">
@@ -645,7 +585,6 @@
         </div>
     </section>
 
-    <!-- ========== FOOTER ========== -->
     <footer>
         <div class="footer-wave">
             <img src="https://capsule-render.vercel.app/api?type=waving&height=120&color=0:ffb3d9,100:b3e0ff&section=footer" alt="wave">
