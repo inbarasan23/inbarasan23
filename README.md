@@ -22,6 +22,8 @@
 - Node.js
 - Express.js
 - MongoDB
+- Python
+- flask
 
 🎯 Goal
 
